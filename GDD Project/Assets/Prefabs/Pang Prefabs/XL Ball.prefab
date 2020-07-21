@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveLeft: 0
-  moveRight: 0
+  moveRight: 1
   originalBall: {fileID: 7273436278770449415, guid: 15295796d7539644a9b5ae3767082a66,
     type: 3}
   popSounds:

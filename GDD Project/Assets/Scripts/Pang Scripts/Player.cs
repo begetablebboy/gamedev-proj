@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private Animator anim;
     private bool canShoot;
     private bool canWalk;
+    public AudioClip dieSound;
 
     void Awake()
     {
@@ -131,8 +132,10 @@ public class Player : MonoBehaviour
         {
             if(name[1] == "Ball")
             {
-                // whne player touches ball, player dies
-                StartCoroutine(KillPlayer());
+                anim.SetBool("isDie", true);
+                 AudioSource.PlayClipAtPoint(dieSound, transform.position);
+                //whne player touches ball, player dies
+                // StartCoroutine(KillPlayer());
 
             }
         }
@@ -140,10 +143,14 @@ public class Player : MonoBehaviour
 
     IEnumerator KillPlayer()
     {
+       
+        
+
         transform.position = new Vector3(200, 200, 0); // move player out of the screen to indicate player die
         // restart game when player dies
         yield return new WaitForSeconds(1.5f); // wait for 1.5 secs after player dies, then restart level
         //Application.LoadLevel(Application.loadedLevelName);
+         
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
