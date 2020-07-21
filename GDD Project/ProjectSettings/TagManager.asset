@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fruit
+  - Bomb
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 3024741669
+    locked: 0
+  - name: Fruit
+    uniqueID: 1253389885
+    locked: 0
+  - name: Player
+    uniqueID: 794394079
+    locked: 0
+  - name: Canvas
+    uniqueID: 2057964697
     locked: 0
