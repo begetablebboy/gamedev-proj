@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
 public class Player : MonoBehaviour
 {
     [SerializeField]
@@ -16,10 +19,17 @@ public class Player : MonoBehaviour
     private bool canShoot;
     private bool canWalk;
     public AudioClip dieSound;
+    public TextMeshProUGUI healthText;
+    private int healthcount;
 
     void Awake()
     {
         InitializeVariables();
+    }
+
+    private void Start()
+    {
+        healthcount = 3;
     }
 
     // Update is called once per frame
@@ -132,26 +142,32 @@ public class Player : MonoBehaviour
         {
             if(name[1] == "Ball")
             {
-                anim.SetBool("isDie", true);
-                 AudioSource.PlayClipAtPoint(dieSound, transform.position);
-                //whne player touches ball, player dies
-                // StartCoroutine(KillPlayer());
+                healthcount = healthcount - 1;
+                SetHealthCountText();
 
+                if (healthcount == 0)
+                {
+                    anim.SetBool("isDie", true);
+                    AudioSource.PlayClipAtPoint(dieSound, transform.position);
+                    //when player touches ball, player dies
+                    StartCoroutine(KillPlayer());
+                }
             }
         }
     }
 
     IEnumerator KillPlayer()
     {
-       
-        
-
         transform.position = new Vector3(200, 200, 0); // move player out of the screen to indicate player die
         // restart game when player dies
         yield return new WaitForSeconds(1.5f); // wait for 1.5 secs after player dies, then restart level
-        //Application.LoadLevel(Application.loadedLevelName);
-         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                                               //Application.LoadLevel(Application.loadedLevelName);
 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void SetHealthCountText()
+    {
+        healthText.text = "Health: " + healthcount.ToString();
     }
 }

@@ -122,7 +122,8 @@ public class Ball : MonoBehaviour
                 break;
 
             case "XS Ball":
-                forceY = 7f;
+                //forceY = 7f;
+                forceY = 7.5f;
                 break;
         }
     }
