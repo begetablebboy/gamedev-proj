@@ -3,17 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - XL Ball
-  - L Ball
-  - M Ball
-  - S Ball
-  - XS Ball
-  - Rocket
-  - Top
-  - Ground
-  - Left Wall
-  - Right Wall
+  tags: []
   layers:
   - Default
   - TransparentFX
