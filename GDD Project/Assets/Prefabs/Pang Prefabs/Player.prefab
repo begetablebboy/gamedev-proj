@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2311659948842064771, guid: 95e290cb2e0274f4aa17da208a33b9a2,
+  m_Sprite: {fileID: 2586901678192453742, guid: 2bd9bb8b9b968c6459ce7894ecfe46c8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,18 +118,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3686651, y: -0.028008044}
+  m_Offset: {x: -0.24966037, y: 0.012805164}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.59, y: 1.74}
+    oldSize: {x: 1.84, y: 1.62}
     newSize: {x: 1.59, y: 1.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6473367, y: 1.5719532}
+  m_Size: {x: 1.1301558, y: 1.558349}
   m_EdgeRadius: 0
 --- !u!50 &7944477977057370176
 Rigidbody2D:
@@ -166,3 +166,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 2129968804704252229, guid: e2d0aa47779b7cf4da4e17895af1a470, type: 3}
   shootSound: {fileID: 8300000, guid: e41bf6684df51004b8e84cd2ad82098a, type: 3}
+  dieSound: {fileID: 0}
+  healthText: {fileID: 0}

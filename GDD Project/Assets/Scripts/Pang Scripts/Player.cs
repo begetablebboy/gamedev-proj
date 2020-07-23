@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     IEnumerator ShootRocket()
     {
         canWalk = false; // stop walking when shooting
-        anim.Play("PangShoot");
+        anim.Play("BlobbyShoot_P"); //anim.Play("PangShoot");
 
         Vector3 temp = transform.position; // store the current position of the player, so the rocket can be shot wherever the player is
         temp.y = -1.9f; // where to shoot rocket upwards wrt player y-axis
