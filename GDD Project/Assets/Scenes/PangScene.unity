@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 138646043}
   - component: {fileID: 138646045}
   m_Layer: 0
-  m_Name: Left Wall (1)
+  m_Name: MiddlewallL
   m_TagString: Left Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 8759173688674826696, guid: 66a30e56832dddf4aa262804b8f81d1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8759173688674826696, guid: 66a30e56832dddf4aa262804b8f81d1a,
         type: 3}
@@ -383,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 8759173688674826703, guid: 66a30e56832dddf4aa262804b8f81d1a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66a30e56832dddf4aa262804b8f81d1a, type: 3}
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 1279139216}
   - component: {fileID: 1279139215}
   m_Layer: 0
-  m_Name: Right Wall (1)
+  m_Name: MiddlewallR
   m_TagString: Right Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
