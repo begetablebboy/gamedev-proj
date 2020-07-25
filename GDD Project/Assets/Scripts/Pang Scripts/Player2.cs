@@ -150,7 +150,7 @@ public class Player2 : MonoBehaviour
                     anim.SetBool("isDie", true);
                     AudioSource.PlayClipAtPoint(dieSound, transform.position);
                     //when player touches ball, player dies
-                    StartCoroutine(KillPlayer());
+                    // StartCoroutine(KillPlayer());
                 }
             }
         }
