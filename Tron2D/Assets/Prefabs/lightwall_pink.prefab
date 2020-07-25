@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6503858696334682078}
   m_Layer: 0
   m_Name: lightwall_pink
-  m_TagString: Untagged
+  m_TagString: pinkwall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
