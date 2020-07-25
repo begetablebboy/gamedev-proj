@@ -38,7 +38,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlobbyIdle_P
+  m_Name: PangIdle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -53,7 +53,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: fb396a1153b7e8743b158fc7ac9ca84f, type: 2}
+  m_Motion: {fileID: 7400000, guid: 146811c96e7df6f47858144fd4669959, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -91,7 +91,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlobbyDie_P
+  m_Name: PangDie
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -104,7 +104,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9e9b0e457c354674f8b837857fb40f88, type: 2}
+  m_Motion: {fileID: 7400000, guid: 86449e68c5ef19d46b21f25fe30d1e2d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -116,7 +116,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_0
+  m_Name: Player_2
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isWalk
@@ -207,7 +207,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlobbyShoot_P
+  m_Name: PangShoot
   m_Speed: 1.7
   m_CycleOffset: 0
   m_Transitions:
@@ -221,7 +221,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c78f1060267283643917b313634117e8, type: 2}
+  m_Motion: {fileID: 7400000, guid: adff8d4af49d07046ba3289767d1e2a0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -306,7 +306,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlobbyWalk_P
+  m_Name: PangWalk
   m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
@@ -321,7 +321,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 579afedfbecec13469790eaa61def163, type: 2}
+  m_Motion: {fileID: 7400000, guid: fd97c68b0a0e354408150a71bd7f8611, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

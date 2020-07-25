@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4478530813008170846}
   - component: {fileID: 3785903537459013059}
   m_Layer: 0
-  m_Name: Rocket
+  m_Name: Water1
   m_TagString: Rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
