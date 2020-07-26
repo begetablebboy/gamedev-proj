@@ -166,5 +166,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 2129968804704252229, guid: e2d0aa47779b7cf4da4e17895af1a470, type: 3}
   shootSound: {fileID: 8300000, guid: e41bf6684df51004b8e84cd2ad82098a, type: 3}
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: c461b547b9c507c42b617904589eaa13, type: 3}
   healthText: {fileID: 0}
