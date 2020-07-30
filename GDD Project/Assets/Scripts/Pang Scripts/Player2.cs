@@ -20,7 +20,7 @@ public class Player2 : MonoBehaviour
     private bool canWalk;
     public AudioClip dieSound;
     public TextMeshProUGUI healthText;
-    private int healthcount;
+    public int healthcount;
 
     void Awake()
     {
@@ -60,7 +60,7 @@ public class Player2 : MonoBehaviour
     IEnumerator ShootRocket()
     {
         canWalk = false; // stop walking when shooting
-        anim.Play("PangShoot"); //anim.Play("PangShoot");
+        anim.Play("ChickyShoot"); //anim.Play("PangShoot");
 
         Vector3 temp = transform.position; // store the current position of the player, so the rocket can be shot wherever the player is
         temp.y = -1.9f; // where to shoot rocket upwards wrt player y-axis
@@ -150,7 +150,7 @@ public class Player2 : MonoBehaviour
                     anim.SetBool("isDie", true);
                     AudioSource.PlayClipAtPoint(dieSound, transform.position);
                     //when player touches ball, player dies
-                    // StartCoroutine(KillPlayer());
+                    StartCoroutine(KillPlayer());
                 }
             }
         }

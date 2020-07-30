@@ -20,7 +20,7 @@ public class Player1 : MonoBehaviour
     private bool canWalk;
     public AudioClip dieSound;
     public TextMeshProUGUI healthText;
-    private int healthcount;
+    public int healthcount;
 
     void Awake()
     {
@@ -30,6 +30,7 @@ public class Player1 : MonoBehaviour
     private void Start()
     {
         healthcount = 3;
+
     }
 
     // Update is called once per frame
