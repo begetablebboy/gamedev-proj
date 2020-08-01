@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Fruit
   - Bomb
+  - Left Wall
+  - Top
+  - Right Wall
+  - Ground
+  - L Ball
+  - M Ball
+  - S Ball
+  - XS Ball
+  - XL Ball
+  - Rocket
   layers:
   - Default
   - TransparentFX
@@ -49,8 +59,11 @@ TagManager:
   - name: Fruit
     uniqueID: 1253389885
     locked: 0
-  - name: Player
+  - name: Player1
     uniqueID: 794394079
+    locked: 0
+  - name: Player2
+    uniqueID: 265985819
     locked: 0
   - name: Canvas
     uniqueID: 2057964697
