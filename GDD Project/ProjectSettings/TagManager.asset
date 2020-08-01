@@ -16,6 +16,13 @@ TagManager:
   - XS Ball
   - XL Ball
   - Rocket
+  - pinkwall
+  - bluewall
+  - Player1
+  - Player2
+  - Freeze
+  - Poison
+  - Speed
   layers:
   - Default
   - TransparentFX

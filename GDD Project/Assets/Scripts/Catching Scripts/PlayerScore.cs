@@ -24,9 +24,39 @@ public class PlayerScore : MonoBehaviour {
 		}
 
 		if (target.tag == "Fruit") {
-			target.gameObject.SetActive (false);
+			
 			score++;
 			scoreText.text = score.ToString ();
+		}
+
+		if (target.tag == "Freeze") {
+			target.gameObject.SetActive (false);
+			if(gameObject.GetComponent<Player2Movement>()){
+				gameObject.GetComponent<Player2Movement>().freeze();
+			}
+			else if(gameObject.GetComponent<PlayerMovement>()){
+				gameObject.GetComponent<PlayerMovement>().freeze();
+			}
+		}
+
+		if (target.tag == "Poison") {
+			target.gameObject.SetActive (false);
+			if(gameObject.GetComponent<Player2Movement>()){
+				gameObject.GetComponent<Player2Movement>().poison();
+			}
+			else if(gameObject.GetComponent<PlayerMovement>()){
+				gameObject.GetComponent<PlayerMovement>().poison();
+			}
+		}
+
+		if (target.tag == "Speed") {
+			target.gameObject.SetActive (false);
+			if(gameObject.GetComponent<Player2Movement>()){
+				gameObject.GetComponent<Player2Movement>().speedUp();
+			}
+			else if(gameObject.GetComponent<PlayerMovement>()){
+				gameObject.GetComponent<PlayerMovement>().speedUp();
+			}
 		}
 
 	}

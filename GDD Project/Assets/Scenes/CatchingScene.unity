@@ -236,6 +236,9 @@ MonoBehaviour:
   - {fileID: 1000011188572372, guid: ad4dcb45c19d94bd8a9fef0012bd3458, type: 3}
   - {fileID: 1000011414143446, guid: 9a952d5424a5344cd930eba2e18dd215, type: 3}
   - {fileID: 1000013376572744, guid: ba331baed1dea4fccb0c2e818dd7567b, type: 3}
+  - {fileID: 8373799247378640798, guid: a17ef6745f0b5934d9a2a9c119611bf5, type: 3}
+  - {fileID: 3907104920338286236, guid: 2c1ab7327739d434fa3d3b43750cd88d, type: 3}
+  - {fileID: 8419500235933539136, guid: 69964c686f7728a46be50d591c31e955, type: 3}
 --- !u!61 &557587822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -411,6 +414,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f961299fbea84d9289d7b47586f0af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  myBody: {fileID: 0}
+  anim: {fileID: 0}
+  canWalk: 0
 --- !u!114 &646168297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,6 +663,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f961299fbea84d9289d7b47586f0af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  myBody: {fileID: 0}
+  anim: {fileID: 0}
+  canWalk: 0
 --- !u!50 &1638150257
 Rigidbody2D:
   serializedVersion: 4
@@ -946,6 +957,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4aff5b4a2032b4189549b3bd94a6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  myBody: {fileID: 0}
+  anim: {fileID: 0}
+  canWalk: 0
 --- !u!50 &1944264040
 Rigidbody2D:
   serializedVersion: 4
