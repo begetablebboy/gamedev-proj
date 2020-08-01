@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class Player2Movement : MonoBehaviour {
+public class ChickyMovement : MonoBehaviour {
 
 	private float speed = 10f;
 

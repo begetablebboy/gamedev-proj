@@ -6,6 +6,11 @@ public class PlayerMovement2 : MonoBehaviour {
 
 	private float speed = 10f;
 
+    public KeyCode upKey;
+    public KeyCode downKey;
+    public KeyCode rightKey;
+    public KeyCode leftKey;
+
 	private Rigidbody2D myBody;
 
     private Animator anim;
@@ -20,14 +25,14 @@ public class PlayerMovement2 : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		Vector2 vel = myBody.velocity;
-        float h = Input.GetAxis("Horizontal");
-        vel.x = h * speed;
+        float h1 = Input.GetAxis("Horizontal");
+        vel.x = h1 * speed;
 		myBody.velocity = vel;
 
         if (canWalk)
         {
             // moving right
-            if (h > 0)
+            if (Input.GetKeyDown(rightKey))
             {
 
                 Vector3 scale = transform.localScale; // get player current scale
@@ -36,7 +41,7 @@ public class PlayerMovement2 : MonoBehaviour {
                 anim.SetBool("Walk", true);
             }
             //moving left
-            else if (h < 0)
+            else if (Input.GetKeyDown(leftKey))
             {
 
                 Vector3 scale = transform.localScale;
@@ -44,7 +49,7 @@ public class PlayerMovement2 : MonoBehaviour {
                 transform.localScale = scale; // face the Left direction
                 anim.SetBool("Walk", true);
             }
-            else if (h == 0)
+            else
             {
                 anim.SetBool("Walk", false); //idle
             }
