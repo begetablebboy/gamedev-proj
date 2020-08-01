@@ -442,6 +442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3faedbc6dc194ccda844f34b111e60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  score: 0
 --- !u!1 &866025338
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +580,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1206852370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206852373}
+  - component: {fileID: 1206852372}
+  - component: {fileID: 1206852371}
+  m_Layer: 5
+  m_Name: ScoreText2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1206852371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206852370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 70
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 70
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 1000
+--- !u!222 &1206852372
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206852370}
+  m_CullTransparentMesh: 0
+--- !u!224 &1206852373
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206852370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2091246812}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 386, y: 200}
+  m_SizeDelta: {x: 301.9, y: 99.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1638150252
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,9 +671,9 @@ GameObject:
   - component: {fileID: 1638150257}
   - component: {fileID: 1638150256}
   - component: {fileID: 1638150255}
-  - component: {fileID: 1638150254}
   - component: {fileID: 1638150253}
   - component: {fileID: 1638150260}
+  - component: {fileID: 1638150254}
   m_Layer: 0
   m_Name: Blobby Player
   m_TagString: Untagged
@@ -636,9 +716,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1638150252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3faedbc6dc194ccda844f34b111e60a, type: 3}
+  m_Script: {fileID: 11500000, guid: 198de468c62f0a940a6e9b00eb5ce41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 347744626}
 --- !u!114 &1638150255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,10 +946,10 @@ GameObject:
   - component: {fileID: 1944264041}
   - component: {fileID: 1944264040}
   - component: {fileID: 1944264038}
-  - component: {fileID: 1944264037}
   - component: {fileID: 1944264036}
   - component: {fileID: 1944264035}
   - component: {fileID: 1944264039}
+  - component: {fileID: 1944264037}
   m_Layer: 0
   m_Name: Chicky Player
   m_TagString: Untagged
@@ -930,9 +1011,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1944264034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3faedbc6dc194ccda844f34b111e60a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b6ecc04c80ea7d478d7c902b4fb48f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText2: {fileID: 1206852371}
 --- !u!114 &1944264038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1138,6 +1220,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 347744625}
+  - {fileID: 1206852373}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -3,16 +3,16 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class PlayerScore : MonoBehaviour {
+public class ChickyScore : MonoBehaviour {
 
-	private Text scoreText;
+	public Text scoreText2;
 
 	private int score = 0;
 
 	// Use this for initialization
 	void Awake () {
-		scoreText = GameObject.Find ("ScoreText").GetComponent<Text> ();
-		scoreText.text = "0";
+		scoreText2 = GameObject.Find ("ScoreText2").GetComponent<Text> ();
+		scoreText2.text = "0";
 	}
 
 	void OnTriggerEnter2D (Collider2D target) {
@@ -26,7 +26,7 @@ public class PlayerScore : MonoBehaviour {
 		if (target.tag == "Fruit") {
 			
 			score++;
-			scoreText.text = score.ToString ();
+			scoreText2.text = score.ToString ();
 		}
 
 		if (target.tag == "Freeze") {
