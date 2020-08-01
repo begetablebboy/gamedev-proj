@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement2 : MonoBehaviour {
 
 	private float speed = 10f;
 
@@ -20,14 +20,14 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		Vector2 vel = myBody.velocity;
-        float h1 = Input.GetAxis("Horizontal");
-        vel.x = h1 * speed;
+        float h = Input.GetAxis("Horizontal");
+        vel.x = h * speed;
 		myBody.velocity = vel;
 
         if (canWalk)
         {
             // moving right
-            if (h1 > 0)
+            if (h > 0)
             {
 
                 Vector3 scale = transform.localScale; // get player current scale
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour {
                 anim.SetBool("Walk", true);
             }
             //moving left
-            else if (h1 < 0)
+            else if (h < 0)
             {
 
                 Vector3 scale = transform.localScale;
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour {
                 transform.localScale = scale; // face the Left direction
                 anim.SetBool("Walk", true);
             }
-            else if (h1 == 0)
+            else if (h == 0)
             {
                 anim.SetBool("Walk", false); //idle
             }
