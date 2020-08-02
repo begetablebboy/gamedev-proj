@@ -76,7 +76,7 @@ public class Move : MonoBehaviour
         }
         else if (Input.GetKeyDown(rightKey))
         {
-            if(isdownKey == true && isupKey == false)
+            if (isdownKey == true && isupKey == false)
             {
                 transform.localRotation = Quaternion.identity; // get local rotation
                 transform.localRotation = Quaternion.Euler(0, 0, 90); // change the facing direction to the left 
@@ -147,28 +147,50 @@ public class Move : MonoBehaviour
         // Not the current wall?
         if (co != wall)
         {
-            // print("Player lost: " + name);
-            // Destroy(gameObject);
-            Debug.Log(gameObject.name);
-            GameObject.Find("player_cyan").GetComponent<Rigidbody2D>().velocity = new Vector2();
-            GameObject.Find("player_pink").GetComponent<Rigidbody2D>().velocity = new Vector2();
-            if (co.gameObject.tag == "pinkwall" && gameObject.name == "player_cyan")
+            if (co.gameObject.tag == "Freeze" && gameObject.name == "player_cyan")
             {
-                player1 = true;
+                co.gameObject.SetActive(false);
+                freeze();
             }
-            else if (co.gameObject.tag == "bluewall" && gameObject.name == "player_pink")
+            else if (co.gameObject.tag == "Freeze" && gameObject.name == "player_pink")
             {
-                player2 = true;
+                co.gameObject.SetActive(false);
+                freeze();
             }
-            else if (co.gameObject.tag == "pinkwall" && gameObject.name == "player_pink")
+            else if (co.gameObject.tag == "Speed" && gameObject.name == "player_pink")
             {
-                player2 = true;
+                co.gameObject.SetActive(false);
+                speedUp();
             }
-            else if (co.gameObject.tag == "bluewall" && gameObject.name == "player_cyan")
+            else if (co.gameObject.tag == "Speed" && gameObject.name == "player_cyan")
             {
-                player1 = true;
+                co.gameObject.SetActive(false);
+                speedUp();
             }
-            end = true;
+            else
+            {
+                Debug.Log(gameObject.name);
+                GameObject.Find("player_cyan").GetComponent<Rigidbody2D>().velocity = new Vector2();
+                GameObject.Find("player_pink").GetComponent<Rigidbody2D>().velocity = new Vector2();
+                if (co.gameObject.tag == "pinkwall" && gameObject.name == "player_cyan")
+                {
+                    player1 = true;
+                }
+                else if (co.gameObject.tag == "bluewall" && gameObject.name == "player_pink")
+                {
+                    player2 = true;
+                }
+                else if (co.gameObject.tag == "pinkwall" && gameObject.name == "player_pink")
+                {
+                    player2 = true;
+                }
+                else if (co.gameObject.tag == "bluewall" && gameObject.name == "player_cyan")
+                {
+                    player1 = true;
+                }
+                end = true;
+            }
+
         }
     }
 
@@ -190,7 +212,7 @@ public class Move : MonoBehaviour
             //GUI.Label(new Rect(0, 0, 100, 20), "You Win !!"); // this will display the "You Win" text
             if (GUI.Button(new Rect(0, 20, 100, 50), "Play Again")) // this displays the "play again" text and when clicked runs the "MoveToStart" function(method)
             {
-                SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+                SceneManager.LoadScene("TronScene", LoadSceneMode.Single);
             }
             if (GUI.Button(new Rect(0, 70, 100, 50), "Quit")) // shows "quit" text and ends the game
             {
@@ -198,5 +220,21 @@ public class Move : MonoBehaviour
             }
             GUI.EndGroup(); // this is required once to close the group started above
         }
+    }
+    public void freeze()
+    {
+        speed = 0f;
+        StartCoroutine(Unfreeze(2f));
+    }
+
+    public void speedUp()
+    {
+        speed = 30f;
+        StartCoroutine(Unfreeze(5f));
+    }
+    IEnumerator Unfreeze(float waitTime)
+    {
+        yield return new WaitForSecondsRealtime(waitTime);
+        speed = 16f;
     }
 }
