@@ -27,6 +27,8 @@ public class Move : MonoBehaviour
     // Last Wall's End
     Vector2 lastWallEnd;
 
+    Vector2 lastVelocity;
+
     bool end = false;
 
     bool player1 = false;
@@ -224,17 +226,27 @@ public class Move : MonoBehaviour
     public void freeze()
     {
         speed = 0f;
+        lastVelocity = GetComponent<Rigidbody2D>().velocity;
+        GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity * speed;
         StartCoroutine(Unfreeze(2f));
     }
 
     public void speedUp()
     {
         speed = 30f;
-        StartCoroutine(Unfreeze(5f));
+        GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity * (2f);
+        StartCoroutine(NormalSpeed(5f));
     }
+    IEnumerator NormalSpeed(float waitTime)
+    {
+        yield return new WaitForSecondsRealtime(waitTime);
+        speed = 16f;
+    }
+
     IEnumerator Unfreeze(float waitTime)
     {
         yield return new WaitForSecondsRealtime(waitTime);
         speed = 16f;
+        GetComponent<Rigidbody2D>().velocity = lastVelocity;
     }
 }
