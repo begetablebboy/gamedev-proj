@@ -2,20 +2,7 @@
 using System.Collections;
 using System;
 
-public class PlayerMovement : MonoBehaviour {
-
-	private float speed = 10f;
-
-	private Rigidbody2D myBody;
-
-    private Animator anim;
-    private bool canWalk;
-
-	void Awake () {
-		myBody = GetComponent<Rigidbody2D> ();
-        anim = GetComponent<Animator>();
-        canWalk = true;
-	}
+public class PlayerMovement : BasicMovement {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
