@@ -56,7 +56,7 @@ public class Move : MonoBehaviour
             transform.localRotation = Quaternion.identity; // get current rotation
             transform.localRotation = Quaternion.Euler(0, 0, 0); // reset the rotation to default
             Vector3 scale = transform.localScale;
-            scale.y = 2.5f;
+            scale.y = 5f;
             transform.localScale = scale;
             spawnWall();
 
@@ -69,7 +69,7 @@ public class Move : MonoBehaviour
             transform.localRotation = Quaternion.identity;
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             Vector3 scale = transform.localScale;
-            scale.y = -2.5f;
+            scale.y = -5f;
             transform.localScale = scale;
             spawnWall();
 
