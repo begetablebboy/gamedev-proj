@@ -23,6 +23,7 @@ TagManager:
   - Freeze
   - Poison
   - Speed
+  - Next Game Button
   layers:
   - Default
   - TransparentFX

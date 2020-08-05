@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeRemaining = 10;
+    public float timeRemaining = 1;
     public bool timerIsRunning = false;
 
     public Text results;
     public Text timeText;
     public Text player1Score;
     public Text player2Score;
-
-
+    private string sceneName = "TronScene";
+    private float timer = 0;
+    private bool timerReached = false;
     private void Start()
     {
         // Starts the timer automatically
@@ -22,6 +23,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+
         DisplayTime(timeRemaining);
         if (timerIsRunning)
         {
@@ -34,12 +36,18 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 if (int.Parse(player2Score.text) > int.Parse(player1Score.text)){
                     results.text = "Player 2 wins!";
+
+    
                 }
                 else if (int.Parse(player1Score.text) > int.Parse(player2Score.text)){
                     results.text = "Player 1 wins!";
+                    
+                    
                 }
                 else {
                     results.text = "Draw!";
+                    
+                  
                 }
                 timeRemaining = 0;
                 timerIsRunning = false;
