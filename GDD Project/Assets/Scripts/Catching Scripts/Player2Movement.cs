@@ -7,7 +7,7 @@ public class Player2Movement : BasicMovement {
 	// Update is called once per frame
 	void FixedUpdate () {
 		Vector2 vel = myBody.velocity;
-        float h = Input.GetAxis("Horizontal2");
+        float h = Input.GetAxis("Horizontal");
         vel.x = h * speed;
 		myBody.velocity = vel;
 
