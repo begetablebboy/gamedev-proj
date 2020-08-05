@@ -36,18 +36,18 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 if (int.Parse(player2Score.text) > int.Parse(player1Score.text)){
                     results.text = "Player 2 wins!";
-
-    
+                    
+                    Application.LoadLevel(sceneName);
                 }
                 else if (int.Parse(player1Score.text) > int.Parse(player2Score.text)){
                     results.text = "Player 1 wins!";
                     
-                    
+                    Application.LoadLevel(sceneName);
                 }
                 else {
                     results.text = "Draw!";
                     
-                  
+                    Application.LoadLevel(sceneName);
                 }
                 timeRemaining = 0;
                 timerIsRunning = false;

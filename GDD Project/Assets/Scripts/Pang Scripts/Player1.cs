@@ -21,6 +21,7 @@ public class Player1 : MonoBehaviour
     public AudioClip dieSound;
     public TextMeshProUGUI healthText;
     public int healthcount;
+    private string sceneName = "CatchingScene"; 
 
     void Awake()
     {
@@ -163,8 +164,8 @@ public class Player1 : MonoBehaviour
         // restart game when player dies
         yield return new WaitForSeconds(1.5f); // wait for 1.5 secs after player dies, then restart level
                                                //Application.LoadLevel(Application.loadedLevelName);
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Application.LoadLevel(sceneName);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void SetHealthCountText()
