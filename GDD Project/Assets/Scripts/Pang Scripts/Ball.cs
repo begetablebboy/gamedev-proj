@@ -16,6 +16,7 @@ public class Ball : MonoBehaviour
     private Ball ball1Script, ball2Script; // need scripts for the smaller balls to manipulate their speed and direction
     [SerializeField]
     private AudioClip[] popSounds; // array bcos got 2 balls
+    private int ballcount = 21;
 
     // Start is called before the first frame update
     void Awake()
@@ -61,8 +62,8 @@ public class Ball : MonoBehaviour
         ball2Script.SetMoveRight(true);
 
         // give the ball some boost
-        ball1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 2.5f);
-        ball2.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 2.5f);
+        //ball1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 2.5f);
+        //ball2.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 2.5f);
 
         AudioSource.PlayClipAtPoint(popSounds[Random.Range(0, popSounds.Length)], transform.position); // play popSounds at position
         gameObject.SetActive(false);
@@ -106,24 +107,28 @@ public class Ball : MonoBehaviour
         switch (this.gameObject.tag)
         {
             case "XL Ball":
+                //forceY = 11.5f;
                 forceY = 11.5f;
                 break;
 
             case "L Ball":
-                forceY = 10.5f;
+                //forceY = 10.5f;
+                forceY = 11f;
                 break;
 
             case "M Ball":
-                forceY = 9f;
+                //forceY = 9f;
+                forceY = 10.5f;
                 break;
 
             case "S Ball":
-                forceY = 8f;
+                //forceY = 8f;
+                forceY = 10f;
                 break;
 
             case "XS Ball":
                 //forceY = 7f;
-                forceY = 7.5f;
+                forceY = 10f;
                 break;
         }
     }
@@ -159,7 +164,10 @@ public class Ball : MonoBehaviour
         {
             if(gameObject.tag != "XS Ball")
             {
+                // if not XS ball, continue to instantiate new balls
                 InitializeBallandDisableCurrentBall();
+                //ballcount = ballcount - 1;
+                //Debug.Log(ballcount);
             }
             else
             {
