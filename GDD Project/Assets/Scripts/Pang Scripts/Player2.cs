@@ -20,7 +20,9 @@ public class Player2 : MonoBehaviour
     private bool canWalk;
     public AudioClip dieSound;
     public TextMeshProUGUI healthText;
-    public int healthcount;
+    public int maxHealth = 20;
+    public int currentHealth;
+    public HealthBar healthbar;
     private string sceneName = "CatchingScene"; 
 
     void Awake()
@@ -30,7 +32,10 @@ public class Player2 : MonoBehaviour
 
     private void Start()
     {
-        healthcount = 3;
+        //healthcount = 3;
+        currentHealth = maxHealth;
+        healthbar.SetMaxHealth(maxHealth);
+
     }
 
     // Update is called once per frame
@@ -135,18 +140,22 @@ public class Player2 : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+   private void OnTriggerEnter2D(Collider2D collision)
     {
         string[] name = collision.name.Split();
-
-        if (name.Length > 1)
+        
+        if(name.Length > 1)
         {
-            if (name[1] == "Ball")
+            Debug.Log("name:" + name[0] + name[1]);
+
+            if(name[1] == "Ball")
             {
-                healthcount = healthcount - 1;
+                //healthcount = healthcount - 1;
+                currentHealth = currentHealth - 1;
+                healthbar.SetHealth(currentHealth);
                 SetHealthCountText();
 
-                if (healthcount == 0)
+                if (currentHealth == 0)
                 {
                     anim.SetBool("isDie", true);
                     AudioSource.PlayClipAtPoint(dieSound, transform.position);
@@ -169,6 +178,6 @@ public class Player2 : MonoBehaviour
 
     void SetHealthCountText()
     {
-        healthText.text = "Health: " + healthcount.ToString();
+         healthText.text = "Health: " + currentHealth.ToString();
     }
 }

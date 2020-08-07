@@ -23,7 +23,7 @@ public class Player2Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health = GetComponent<Player2>().healthcount;
+        health = GetComponent<Player2>().currentHealth;
 
         if (health > numofhearts)
         {

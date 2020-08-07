@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
@@ -18,11 +19,17 @@ public class Ball : MonoBehaviour
     private AudioClip[] popSounds; // array bcos got 2 balls
     private int ballcount = 21;
 
+    
+
     // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         SetBallSpeed();
+    
+      
+       
+		// Score2.text = "0";
     }
 
     // Update is called once per frame
@@ -35,6 +42,7 @@ public class Ball : MonoBehaviour
     {
         if(this.gameObject.tag != "XS Ball")
         {
+
             // split the ball into 2 smaller balls
             ball1 = Instantiate(originalBall);
             ball2 = Instantiate(originalBall);
@@ -44,6 +52,11 @@ public class Ball : MonoBehaviour
 
             ball1Script = ball1.GetComponent<Ball>();
             ball2Script = ball2.GetComponent<Ball>();
+            
+
+            
+
+        
         }
     }
 
@@ -70,13 +83,15 @@ public class Ball : MonoBehaviour
     }
 
     public void SetMoveLeft(bool canMoveLeft)
-    {
+    {   
+        // this.ScoreContainer= ScoreContainer.GetComponent<ScoreContainer>();
         this.moveLeft = canMoveLeft;
         this.moveRight = !canMoveLeft; // if moveLeft is true, ! will make it false
     }
 
     public void SetMoveRight(bool canMoveRight)
     {
+        // this.ScoreContainer= ScoreContainer.GetComponent<ScoreContainer>();
         this.moveRight = canMoveRight;
         this.moveLeft = !canMoveRight;
     }
@@ -160,20 +175,41 @@ public class Ball : MonoBehaviour
             //moveLeft = false;
         }
 
-        if (collision.tag == "Rocket")
+        if (collision.tag == "Water")
         {
+            // ScoreContainer.GetComponent<scoreContainer>().UpdateScore();
+               
             if(gameObject.tag != "XS Ball")
             {
                 // if not XS ball, continue to instantiate new balls
                 InitializeBallandDisableCurrentBall();
                 //ballcount = ballcount - 1;
                 //Debug.Log(ballcount);
+             
             }
             else
             {
                 AudioSource.PlayClipAtPoint(popSounds[Random.Range(0, popSounds.Length)], transform.position);
                 gameObject.SetActive(false);
             }
+           
         }
+
+         if (collision.tag == "Plasma")
+        {
+            if(gameObject.tag != "XS Ball")
+            {
+                // if not XS ball, continue to instantiate new balls
+                InitializeBallandDisableCurrentBall();
+                //ballcount = ballcount - 1;
+              
+            }
+            else
+            {
+                AudioSource.PlayClipAtPoint(popSounds[Random.Range(0, popSounds.Length)], transform.position);
+                gameObject.SetActive(false);
+            }
+        }   
+        
     }
 }
