@@ -19,7 +19,6 @@ public class Player2 : MonoBehaviour
     private bool canShoot;
     private bool canWalk;
     public AudioClip dieSound;
-    public TextMeshProUGUI healthText;
     public int maxHealth = 20;
     public int currentHealth;
     public HealthBar healthbar;
@@ -32,7 +31,6 @@ public class Player2 : MonoBehaviour
 
     private void Start()
     {
-        //healthcount = 3;
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
 
@@ -150,10 +148,8 @@ public class Player2 : MonoBehaviour
 
             if(name[1] == "Ball")
             {
-                //healthcount = healthcount - 1;
                 currentHealth = currentHealth - 1;
                 healthbar.SetHealth(currentHealth);
-                SetHealthCountText();
 
                 if (currentHealth == 0)
                 {
@@ -174,10 +170,5 @@ public class Player2 : MonoBehaviour
                                                //Application.LoadLevel(Application.loadedLevelName);
         Application.LoadLevel(sceneName);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    void SetHealthCountText()
-    {
-         healthText.text = "Health: " + currentHealth.ToString();
     }
 }

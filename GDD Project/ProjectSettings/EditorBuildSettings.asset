@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: dcada2b35eeca3e4796ab134fedc9899
   - enabled: 1
+    path: Assets/Scenes/Pang Intro.unity
+    guid: 2d9f7fe11d0130f49bfb55233953b666
+  - enabled: 1
     path: Assets/Scenes/PangScene.unity
     guid: 249f59cd65ac1c14ba018f10ec8b3fbc
   - enabled: 1
+    path: Assets/Scenes/Catching Intro.unity
+    guid: 90ded829afb23954cbd9c6e14d1ec79c
+  - enabled: 1
     path: Assets/Scenes/CatchingScene.unity
     guid: 126e77482de8643de910be58a33e12a9
+  - enabled: 1
+    path: Assets/Scenes/Tron Intro.unity
+    guid: 849a5226d0da7cf429fd05c7fe6a28a1
   - enabled: 1
     path: Assets/Scenes/TronScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729

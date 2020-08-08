@@ -16,8 +16,8 @@ public class scoreContainer : MonoBehaviour
     void Start()
     {
 
-    Score1 = GameObject.Find ("Score1").GetComponent<Text> ();
-    Score2 = GameObject.Find ("Score2").GetComponent<Text> ();
+    Score1 = GameObject.Find ("P1 Score").GetComponent<Text> ();
+    Score2 = GameObject.Find ("P2 Score").GetComponent<Text> ();
         
     }
 

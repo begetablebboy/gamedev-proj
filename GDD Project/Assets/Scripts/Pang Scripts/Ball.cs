@@ -17,18 +17,12 @@ public class Ball : MonoBehaviour
     private Ball ball1Script, ball2Script; // need scripts for the smaller balls to manipulate their speed and direction
     [SerializeField]
     private AudioClip[] popSounds; // array bcos got 2 balls
-    private int ballcount = 21;
-
-    
 
     // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        SetBallSpeed();
-    
-      
-       
+        SetBallSpeed();       
 		// Score2.text = "0";
     }
 
@@ -52,11 +46,6 @@ public class Ball : MonoBehaviour
 
             ball1Script = ball1.GetComponent<Ball>();
             ball2Script = ball2.GetComponent<Ball>();
-            
-
-            
-
-        
         }
     }
 
@@ -182,10 +171,7 @@ public class Ball : MonoBehaviour
             if(gameObject.tag != "XS Ball")
             {
                 // if not XS ball, continue to instantiate new balls
-                InitializeBallandDisableCurrentBall();
-                //ballcount = ballcount - 1;
-                //Debug.Log(ballcount);
-             
+                InitializeBallandDisableCurrentBall();             
             }
             else
             {
