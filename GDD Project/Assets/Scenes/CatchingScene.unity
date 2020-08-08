@@ -1095,6 +1095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 347744626}
+  gameCanvas: {fileID: 2091246808}
 --- !u!114 &1638150255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,6 +1391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText2: {fileID: 1206852371}
+  gameCanvas: {fileID: 2091246808}
 --- !u!114 &1944264038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1518,7 +1520,7 @@ GameObject:
   - component: {fileID: 2091246809}
   - component: {fileID: 2091246813}
   m_Layer: 5
-  m_Name: Blobby Canvas
+  m_Name: Game Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,6 +7,8 @@ public class BloobyScore : MonoBehaviour {
 
 	public Text scoreText;
 
+	public GameObject gameCanvas;
+
 	private int score = 0;
 
 	// Use this for initialization
@@ -20,7 +22,7 @@ public class BloobyScore : MonoBehaviour {
 		if (target.tag == "Bomb") {
 			transform.position = new Vector2 (0, 100);
 			target.gameObject.SetActive (false);
-			StartCoroutine (RestartGame());
+			EndGame();
 		}
 
 		if (target.tag == "Fruit") {
@@ -64,6 +66,13 @@ public class BloobyScore : MonoBehaviour {
 	IEnumerator RestartGame() {
 		yield return new WaitForSecondsRealtime (2f);
 		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
+	}
+
+	void EndGame() {
+		Timer timer = gameCanvas.GetComponent<Timer>();
+		timer.results.text = "Player 2 wins!";
+		timer.EndGame();
+		timer.StartCoroutine(timer.ChangeGame());
 	}
 
 } // class

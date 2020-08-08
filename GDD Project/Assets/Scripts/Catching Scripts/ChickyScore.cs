@@ -7,6 +7,8 @@ public class ChickyScore : MonoBehaviour {
 
 	public Text scoreText2;
 
+	public GameObject gameCanvas;
+
 	private int score = 0;
 
 	// Use this for initialization
@@ -20,7 +22,7 @@ public class ChickyScore : MonoBehaviour {
 		if (target.tag == "Bomb") {
 			transform.position = new Vector2 (0, 100);
 			target.gameObject.SetActive (false);
-			StartCoroutine (RestartGame());
+			EndGame();
 		}
 
 		if (target.tag == "Fruit") {
@@ -64,6 +66,13 @@ public class ChickyScore : MonoBehaviour {
 	IEnumerator RestartGame() {
 		yield return new WaitForSecondsRealtime (2f);
 		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
+	}
+
+	void EndGame() {
+		Timer timer = gameCanvas.GetComponent<Timer>();
+		timer.results.text = "Player 1 wins!";
+		timer.EndGame();
+		timer.StartCoroutine(timer.ChangeGame());
 	}
 
 } // class

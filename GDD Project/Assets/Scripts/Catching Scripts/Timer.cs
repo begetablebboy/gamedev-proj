@@ -54,13 +54,22 @@ public class Timer : MonoBehaviour
                     
                     // Application.LoadLevel(sceneName);
                 }
-                timeRemaining = 0;
-                timerIsRunning = false;
-                Destroy(player1.GetComponent<BloobyScore>());
-                Destroy(player2.GetComponent<ChickyScore>());
-
+                EndGame();
+                StartCoroutine (ChangeGame());
             }
         }
+    }
+
+    public void EndGame(){
+        Destroy(player1.GetComponent<BloobyScore>());
+        Destroy(player2.GetComponent<ChickyScore>());
+        timeRemaining = 0;
+        timerIsRunning = false;
+    }
+
+    public IEnumerator ChangeGame(){
+        yield return new WaitForSecondsRealtime (5f);
+		Application.LoadLevel(sceneName);
     }
 
     void DisplayTime(float timeToDisplay)
