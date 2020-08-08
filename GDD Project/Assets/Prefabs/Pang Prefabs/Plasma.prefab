@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3705488675963932209}
   - component: {fileID: 475480153271963733}
   - component: {fileID: 7562068166095419248}
-  - component: {fileID: 7087847574290685421}
+  - component: {fileID: 5895012746662135273}
   m_Layer: 0
   m_Name: Plasma
-  m_TagString: Rocket
+  m_TagString: Plasma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7087847574290685421
+--- !u!114 &5895012746662135273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5429097813568457067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abc6c9a174bfdf74f87e0cfea02c09fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7220a91068cd67447b8bcc408fcc92cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreContainer: {fileID: 0}

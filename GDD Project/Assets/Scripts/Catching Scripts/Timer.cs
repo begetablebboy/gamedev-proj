@@ -12,6 +12,10 @@ public class Timer : MonoBehaviour
     public Text timeText;
     public Text player1Score;
     public Text player2Score;
+
+    public GameObject player1;
+    
+    public GameObject player2;
     private string sceneName = "TronScene";
     private float timer = 0;
     private bool timerReached = false;
@@ -19,6 +23,7 @@ public class Timer : MonoBehaviour
     {
         // Starts the timer automatically
         timerIsRunning = true;
+        results.text = "";
     }
 
     void Update()
@@ -37,22 +42,34 @@ public class Timer : MonoBehaviour
                 if (int.Parse(player2Score.text) > int.Parse(player1Score.text)){
                     results.text = "Player 2 wins!";
                     
-                    Application.LoadLevel(sceneName);
+                    // Application.LoadLevel(sceneName);
                 }
                 else if (int.Parse(player1Score.text) > int.Parse(player2Score.text)){
                     results.text = "Player 1 wins!";
                     
-                    Application.LoadLevel(sceneName);
+                    // Application.LoadLevel(sceneName);
                 }
                 else {
                     results.text = "Draw!";
                     
-                    Application.LoadLevel(sceneName);
+                    // Application.LoadLevel(sceneName);
                 }
-                timeRemaining = 0;
-                timerIsRunning = false;
+                EndGame();
+                StartCoroutine (ChangeGame());
             }
         }
+    }
+
+    public void EndGame(){
+        Destroy(player1.GetComponent<BloobyScore>());
+        Destroy(player2.GetComponent<ChickyScore>());
+        timeRemaining = 0;
+        timerIsRunning = false;
+    }
+
+    public IEnumerator ChangeGame(){
+        yield return new WaitForSecondsRealtime (5f);
+		Application.LoadLevel(sceneName);
     }
 
     void DisplayTime(float timeToDisplay)

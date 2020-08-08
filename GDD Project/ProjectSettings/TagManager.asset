@@ -24,6 +24,9 @@ TagManager:
   - Poison
   - Speed
   - Next Game Button
+  - Plasma
+  - Water
+  - Wall
   layers:
   - Default
   - TransparentFX

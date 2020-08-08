@@ -265,7 +265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30513919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6, y: 0, z: 0}
+  m_LocalPosition: {x: 9.9, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -281,7 +281,6 @@ GameObject:
   m_Component:
   - component: {fileID: 220293405}
   - component: {fileID: 220293404}
-  - component: {fileID: 220293403}
   m_Layer: 0
   m_Name: grid (1)
   m_TagString: Untagged
@@ -289,21 +288,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &220293403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220293402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e77d1f65153834f98d347ad4c6906b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  power:
-  - {fileID: 1542969745346467807, guid: 498ad91d23b564a44aeceec7f8379af1, type: 3}
-  - {fileID: 8638056424860433752, guid: a00f57529f4790b47a4e7055edf519db, type: 3}
 --- !u!212 &220293404
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -362,7 +346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220293402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.5, y: 0.6, z: 0}
+  m_LocalPosition: {x: -34.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -464,7 +448,7 @@ GameObject:
   - component: {fileID: 590667339}
   m_Layer: 0
   m_Name: Rightwall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -482,7 +466,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012866974, y: 0.17752862}
+  m_Offset: {x: 0.012866974, y: 0.18575275}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -493,7 +477,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8677597, y: 7.0350432}
+  m_Size: {x: 0.8677597, y: 7.0185947}
   m_EdgeRadius: 0
 --- !u!212 &590667340
 SpriteRenderer:
@@ -553,7 +537,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590667338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100.2, y: -3.7, z: 0}
+  m_LocalPosition: {x: 100.2, y: -3.3, z: 0}
   m_LocalScale: {x: 1, y: 18.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -572,7 +556,7 @@ GameObject:
   - component: {fileID: 689772487}
   m_Layer: 0
   m_Name: Leftwall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -661,8 +645,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689772486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -99.6, y: -5.4, z: 0}
-  m_LocalScale: {x: 1, y: 18.3, z: 1}
+  m_LocalPosition: {x: -99.6, y: -3.2, z: 0}
+  m_LocalScale: {x: 1, y: 18.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -777,7 +761,7 @@ GameObject:
   - component: {fileID: 1454133050}
   m_Layer: 0
   m_Name: Topwall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -840,8 +824,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454133047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 63.9, z: 0}
-  m_LocalScale: {x: 30, y: 1, z: 1}
+  m_LocalPosition: {x: 0.2, y: 63.9, z: 0}
+  m_LocalScale: {x: 28.6, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -859,7 +843,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11242819, y: 0.18371773}
+  m_Offset: {x: 0.010030746, y: 0.18371773}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -870,7 +854,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.097793, y: 0.5014458}
+  m_Size: {x: 7.0017786, y: 0.5014458}
   m_EdgeRadius: 0
 --- !u!1 &1687186813
 GameObject:
@@ -885,7 +869,7 @@ GameObject:
   - component: {fileID: 1687186814}
   m_Layer: 0
   m_Name: Botwall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -903,7 +887,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.081596136, y: 0.3585472}
+  m_Offset: {x: 0.0021431446, y: 0.3585472}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -914,7 +898,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.0469055, y: 0.9646988}
+  m_Size: {x: 7.0361047, y: 0.9646988}
   m_EdgeRadius: 0
 --- !u!212 &1687186815
 SpriteRenderer:
@@ -974,8 +958,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687186813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -64.2, z: 0}
-  m_LocalScale: {x: 30, y: 1, z: 1}
+  m_LocalPosition: {x: 0.3, y: -64.2, z: 0}
+  m_LocalScale: {x: 28.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1124,7 +1108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878094121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.2, y: 0, z: 0}
+  m_LocalPosition: {x: -9.9, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
