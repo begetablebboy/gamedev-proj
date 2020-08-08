@@ -8,9 +8,16 @@ public class CountDownController : MonoBehaviour
 {
     public int countdownTime;
     public TextMeshProUGUI countdownDisplay;
+    //[SerializeField]
+    public GameObject[] initialObjects;
 
     private void Start()
     {
+        //if (initialObjects.activeInHierarchy)
+        //{
+        //    initialObjects.SetActive(false);
+        //}
+        foreach (GameObject go in initialObjects) go.SetActive(false);
         StartCoroutine(CountdownToStart());
     }
 
@@ -30,5 +37,8 @@ public class CountDownController : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         countdownDisplay.gameObject.SetActive(false);
+
+        foreach (GameObject go in initialObjects) go.SetActive(true);
+        //initialObjects.SetActive(true);
     }
 }

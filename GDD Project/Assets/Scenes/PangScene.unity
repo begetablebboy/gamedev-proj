@@ -172,6 +172,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdownTime: 3
   countdownDisplay: {fileID: 2081258203}
+  initialObjects:
+  - {fileID: 1242189564}
+  - {fileID: 1054969286}
 --- !u!1 &30819911
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,10 +413,15 @@ PrefabInstance:
       propertyPath: ScoreContainer
       value: 
       objectReference: {fileID: 181159579}
+    - target: {fileID: -5051667023987536498, guid: 66a30e56832dddf4aa262804b8f81d1a,
+        type: 3}
+      propertyPath: startBall
+      value: 
+      objectReference: {fileID: 1242189564}
     - target: {fileID: 8759173688674826696, guid: 66a30e56832dddf4aa262804b8f81d1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.41
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 8759173688674826696, guid: 66a30e56832dddf4aa262804b8f81d1a,
         type: 3}
@@ -2006,6 +2014,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947770666}
   m_CullTransparentMesh: 0
+--- !u!1 &1054969286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8759173688674826703, guid: 66a30e56832dddf4aa262804b8f81d1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1213997788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1116515388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2262,12 +2276,12 @@ PrefabInstance:
     - target: {fileID: 8759173688674826696, guid: 66a30e56832dddf4aa262804b8f81d1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.41
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8759173688674826696, guid: 66a30e56832dddf4aa262804b8f81d1a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.93
+      value: 2.39
       objectReference: {fileID: 0}
     - target: {fileID: 8759173688674826696, guid: 66a30e56832dddf4aa262804b8f81d1a,
         type: 3}
@@ -2322,10 +2336,16 @@ PrefabInstance:
     - target: {fileID: 8759173688674826703, guid: 66a30e56832dddf4aa262804b8f81d1a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66a30e56832dddf4aa262804b8f81d1a, type: 3}
+--- !u!1 &1242189564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8759173688674826703, guid: 66a30e56832dddf4aa262804b8f81d1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 255382897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1285335667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3992,12 +4012,12 @@ PrefabInstance:
     - target: {fileID: 7944477977057370178, guid: 8aaf7128012d3204fbc77c611ab88487,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.51
+      value: -4.66
       objectReference: {fileID: 0}
     - target: {fileID: 7944477977057370178, guid: 8aaf7128012d3204fbc77c611ab88487,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.74
+      value: -1.72
       objectReference: {fileID: 0}
     - target: {fileID: 7944477977057370178, guid: 8aaf7128012d3204fbc77c611ab88487,
         type: 3}

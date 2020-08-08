@@ -22,24 +22,14 @@ public class Ball : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        SetBallSpeed();       
-		// Score2.text = "0";
-    }
-
-    private void Start()
-    {
-        StartCoroutine(StopBall());
+        SetBallSpeed();
+        // Score2.text = "0";
     }
 
     // Update is called once per frame
     void Update()
     {
         MoveBall();
-    }
-
-    IEnumerator StopBall()
-    {
-        yield return new WaitForSeconds(2f);
     }
 
     void InstantiateBalls()
@@ -159,19 +149,11 @@ public class Ball : MonoBehaviour
         if (collision.tag == "Right Wall")
         {
             SetMoveLeft(true);
-            //Old ver
-            // if collide with Right Wall will start bouncing towards the left
-            //moveRight = false;
-            //moveLeft = true;
         }
 
         if (collision.tag == "Left Wall")
         {
             SetMoveRight(true);
-            // Old ver
-            // if collide with Left Wall will start bouncing towards the right
-            //moveRight = true;
-            //moveLeft = false;
         }
 
         if (collision.tag == "Water")
@@ -196,9 +178,7 @@ public class Ball : MonoBehaviour
             if(gameObject.tag != "XS Ball")
             {
                 // if not XS ball, continue to instantiate new balls
-                InitializeBallandDisableCurrentBall();
-                //ballcount = ballcount - 1;
-              
+                InitializeBallandDisableCurrentBall();              
             }
             else
             {
