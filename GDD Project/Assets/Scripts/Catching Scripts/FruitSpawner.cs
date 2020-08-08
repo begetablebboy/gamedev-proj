@@ -20,16 +20,20 @@ public class FruitSpawner : MonoBehaviour {
 	}
 
 	void Start () {
-		StartCoroutine (SpawnFruit(1f));
+		StartCoroutine (SpawnFruit(0.00001f));
 	}
 
 	IEnumerator SpawnFruit(float time) {
 		yield return new WaitForSecondsRealtime (time);
 
-		Vector3 temp = transform.position;
-		temp.x = Random.Range (x1, x2);
+		Vector3 temp1 = transform.position;
+		temp1.x = Random.Range (x1, x2);
+		Vector3 temp2 = transform.position;
+		temp2.x = Random.Range (x1, x2);
+		temp2.y += 3;
 
-		Instantiate (fruits[Random.Range(0, fruits.Length)], temp, Quaternion.identity);
+		Instantiate (fruits[Random.Range(0, fruits.Length)], temp1, Quaternion.identity);
+		Instantiate (fruits[Random.Range(0, fruits.Length)], temp2, Quaternion.identity);
 
 		StartCoroutine (SpawnFruit(Random.Range(1f, 2f)));
 
