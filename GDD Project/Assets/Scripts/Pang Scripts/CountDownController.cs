@@ -13,10 +13,6 @@ public class CountDownController : MonoBehaviour
 
     private void Start()
     {
-        //if (initialObjects.activeInHierarchy)
-        //{
-        //    initialObjects.SetActive(false);
-        //}
         foreach (GameObject go in initialObjects) go.SetActive(false);
         StartCoroutine(CountdownToStart());
     }

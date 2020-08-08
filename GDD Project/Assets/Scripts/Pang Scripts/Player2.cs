@@ -50,7 +50,7 @@ public class Player2 : MonoBehaviour
 
     void Shoot()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("enter"))
         {
             // when click left mouse button
             if (canShoot)
@@ -94,7 +94,7 @@ public class Player2 : MonoBehaviour
     {
         var force = 0f;
         var velocity = Math.Abs(rb.velocity.x); // determine velocity of player (take absoulute value, always positive)
-        float horizontal = Input.GetAxis("Horizontal2"); // return value of 0 to 1 if going Right, 0 to -1 if going Left
+        float horizontal = Input.GetAxis("Horizontal"); // return value of 0 to 1 if going Right, 0 to -1 if going Left
 
         // able to walk when not shoooting
         if (canWalk)

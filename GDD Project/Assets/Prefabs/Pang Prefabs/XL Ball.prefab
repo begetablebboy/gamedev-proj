@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveLeft: 0
   moveRight: 1
-  originalBall: {fileID: 7273436278770449415, guid: 15295796d7539644a9b5ae3767082a66,
+  originalBall: {fileID: 5346399133307494887, guid: 15295796d7539644a9b5ae3767082a66,
     type: 3}
   popSounds:
   - {fileID: 8300000, guid: d9b7c187da84d2e4fb98168ca697a044, type: 3}
