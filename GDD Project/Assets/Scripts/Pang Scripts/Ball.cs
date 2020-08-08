@@ -26,10 +26,20 @@ public class Ball : MonoBehaviour
 		// Score2.text = "0";
     }
 
+    private void Start()
+    {
+        StartCoroutine(StopBall());
+    }
+
     // Update is called once per frame
     void Update()
     {
         MoveBall();
+    }
+
+    IEnumerator StopBall()
+    {
+        yield return new WaitForSeconds(2f);
     }
 
     void InstantiateBalls()

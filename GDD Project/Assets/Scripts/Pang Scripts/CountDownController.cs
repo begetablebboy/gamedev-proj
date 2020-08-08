@@ -8,7 +8,6 @@ public class CountDownController : MonoBehaviour
 {
     public int countdownTime;
     public TextMeshProUGUI countdownDisplay;
-    public PangController PangController;
 
     private void Start()
     {
@@ -27,8 +26,6 @@ public class CountDownController : MonoBehaviour
         }
 
         countdownDisplay.text = "GO!";
-
-        PangController.StartGame();
 
         yield return new WaitForSeconds(1f);
 
