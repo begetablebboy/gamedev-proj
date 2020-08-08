@@ -20,7 +20,7 @@ public class FruitSpawner : MonoBehaviour {
 	}
 
 	void Start () {
-		StartCoroutine (SpawnFruit(0.00001f));
+		StartCoroutine (SpawnFruit(1.0f));
 	}
 
 	IEnumerator SpawnFruit(float time) {
