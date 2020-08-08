@@ -26,6 +26,7 @@ TagManager:
   - Next Game Button
   - Plasma
   - Water
+  - Wall
   layers:
   - Default
   - TransparentFX

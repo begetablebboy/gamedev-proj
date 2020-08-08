@@ -190,6 +190,14 @@ public class Move : MonoBehaviour
                 {
                     player1 = true;
                 }
+                else if (co.gameObject.tag == "Wall" && gameObject.name == "player_cyan")
+                {
+                    player1 = true;
+                }
+                else if (co.gameObject.tag == "Wall" && gameObject.name == "player_pink")
+                {
+                    player2 = true;
+                }
                 end = true;
             }
 

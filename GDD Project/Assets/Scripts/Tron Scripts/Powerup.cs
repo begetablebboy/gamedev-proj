@@ -17,7 +17,7 @@ public class Powerup : MonoBehaviour
 		yield return new WaitForSecondsRealtime (time);
 
 		Vector3 temp = transform.position;
-		temp.x = Random.Range (-60f, 60f);
+		temp.x = Random.Range (-93f, 93f);
         temp.y = Random.Range (-60f, 60f);
 
 		Instantiate (power[Random.Range(0, power.Length)], temp, Quaternion.identity);
