@@ -403,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28c7e8cb76570747ba3fe683ef259d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!114 &523956647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1670,9 +1671,13 @@ MonoBehaviour:
   initialObjects:
   - {fileID: 1302564879}
   - {fileID: 557587820}
+<<<<<<< Updated upstream
   startObjects:
   - {fileID: 1302564879}
   - {fileID: 557587820}
+=======
+  startObjects: []
+>>>>>>> Stashed changes
 --- !u!1 &1944264034
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,3 +2203,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28c7e8cb76570747ba3fe683ef259d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Catching Score

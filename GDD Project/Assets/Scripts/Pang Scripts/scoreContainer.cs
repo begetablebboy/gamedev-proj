@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class scoreContainer : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class scoreContainer : MonoBehaviour
     public Text Score2;
     public double score2 = 0;
 
-    public Text results;
+    public TextMeshProUGUI result1;
+    public TextMeshProUGUI result2;
 
-    private string sceneName = "CatchingScene"; 
+    public TextMeshProUGUI drawResult;
+
+    private string sceneName = "PangScore"; 
 
     public GameObject countdown;
     
@@ -24,7 +28,7 @@ public class scoreContainer : MonoBehaviour
 
     Score1 = GameObject.Find ("P1 Score").GetComponent<Text> ();
     Score2 = GameObject.Find ("P2 Score").GetComponent<Text> ();
-    results.text = "";
+    PlayerPrefs.DeleteAll();
         
     }
 
@@ -37,18 +41,27 @@ public class scoreContainer : MonoBehaviour
             countdown.GetComponent<CountDownController>().done 
          ) {
               if (int.Parse(Score2.text) > int.Parse(Score1.text)){
-                    PlayerPrefs.SetString("PangWinner", "Player2");
-                    results.text = "Player 2 wins!";
+                    if (!PlayerPrefs.HasKey("Player2")){
+                        PlayerPrefs.SetInt("Player1", 0);
+                        PlayerPrefs.SetInt("Player2", 1);
+                    }
+                    result1.gameObject.SetActive(true);
                     
                 }
                 else if (int.Parse(Score1.text) > int.Parse(Score2.text)){
-                    PlayerPrefs.SetString("PangWinner", "Player1");
-                    results.text = "Player 1 wins!";
+                    if (!PlayerPrefs.HasKey("Player2")){
+                        PlayerPrefs.SetInt("Player1", 1);
+                        PlayerPrefs.SetInt("Player2", 0);
+                    }
+                    result2.gameObject.SetActive(true);
                     
                 }
                 else {
-                    PlayerPrefs.SetString("PangWinner", "Draw");
-                    results.text = "Draw!";
+                    if (!PlayerPrefs.HasKey("Player2")){
+                        PlayerPrefs.SetInt("Player1", 1);
+                        PlayerPrefs.SetInt("Player2", 1);
+                    }
+                    drawResult.gameObject.SetActive(true);
                 }
                 StartCoroutine (ChangeGame());
           }

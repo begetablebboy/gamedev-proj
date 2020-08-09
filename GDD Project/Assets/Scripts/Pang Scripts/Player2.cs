@@ -22,7 +22,7 @@ public class Player2 : MonoBehaviour
     public int maxHealth = 20;
     public int currentHealth;
     public HealthBar healthbar;
-    private string sceneName = "CatchingScene"; 
+    private string sceneName = "PangScore"; 
     public AudioClip hitSound;
      public TextMeshProUGUI result2;
 
@@ -169,7 +169,10 @@ public class Player2 : MonoBehaviour
     IEnumerator KillPlayer()
     {
         transform.position = new Vector3(200, 200, 0); // move player out of the screen to indicate player die
-        PlayerPrefs.SetString("PangWinner", "Player1");
+        if (!PlayerPrefs.HasKey("Player2")){
+            PlayerPrefs.SetInt("Player1", 1);
+            PlayerPrefs.SetInt("Player2", 0);
+        }
         // restart game when player dies
         result2.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.5f); // wait for 1.5 secs after player dies, then restart level

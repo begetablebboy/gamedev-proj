@@ -70,7 +70,7 @@ public class ChickyScore : MonoBehaviour {
 
 	void EndGame() {
 		Timer timer = gameCanvas.GetComponent<Timer>();
-		PlayerPrefs.SetString("CatchingWinner", "Player1");
+		PlayerPrefs.SetInt("Player1", PlayerPrefs.GetInt("Player1") + 1);
 		timer.results.text = "Player 1 wins!";
 		timer.EndGame();
 		timer.StartCoroutine(timer.ChangeGame());
