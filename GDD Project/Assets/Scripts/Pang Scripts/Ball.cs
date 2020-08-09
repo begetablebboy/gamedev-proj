@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+
 
 public class Ball : MonoBehaviour
 {
@@ -23,13 +25,43 @@ public class Ball : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         SetBallSpeed();
-        // Score2.text = "0";
+        // if(this.gameObject.tag=="Hidden"){
+        //     this.gameObject.SetActiveRecursively(false);
+        // }
+
+
+       
+
     }
 
     // Update is called once per frame
     void Update()
     {
+                
+       
         MoveBall();
+        // var ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+        // var time=Convert.ToInt64(ts.TotalSeconds);
+
+        // if(time%10==0){
+    
+        //  Debug.Log("Yea");
+    // StartCoroutine(Attack());
+        
+            // gameObject.SetActive(true);
+       
+    
+        
+
+        
+  
+        
+       
+    }
+    void setActiveHere(){
+        if(this.gameObject.tag=="Hidden"){
+        this.gameObject.SetActiveRecursively(true);
+        }
     }
 
     void InstantiateBalls()
@@ -67,7 +99,7 @@ public class Ball : MonoBehaviour
         //ball1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 2.5f);
         //ball2.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 2.5f);
 
-        AudioSource.PlayClipAtPoint(popSounds[Random.Range(0, popSounds.Length)], transform.position); // play popSounds at position
+        AudioSource.PlayClipAtPoint(popSounds[UnityEngine.Random.Range(0, popSounds.Length)], transform.position); // play popSounds at position
         gameObject.SetActive(false);
     }
 
@@ -134,6 +166,10 @@ public class Ball : MonoBehaviour
                 //forceY = 7f;
                 forceY = 10f;
                 break;
+            
+            case "Hidden":
+                forceY = 10f;
+                break;
         }
     }
 
@@ -167,7 +203,7 @@ public class Ball : MonoBehaviour
             }
             else
             {
-                AudioSource.PlayClipAtPoint(popSounds[Random.Range(0, popSounds.Length)], transform.position);
+                AudioSource.PlayClipAtPoint(popSounds[UnityEngine.Random.Range(0, popSounds.Length)], transform.position);
                 gameObject.SetActive(false);
             }
            
@@ -182,7 +218,7 @@ public class Ball : MonoBehaviour
             }
             else
             {
-                AudioSource.PlayClipAtPoint(popSounds[Random.Range(0, popSounds.Length)], transform.position);
+                AudioSource.PlayClipAtPoint(popSounds[UnityEngine.Random.Range(0, popSounds.Length)], transform.position);
                 gameObject.SetActive(false);
             }
         }   

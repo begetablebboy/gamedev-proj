@@ -10,6 +10,7 @@ public class CountDownController : MonoBehaviour
     public TextMeshProUGUI countdownDisplay;
     //[SerializeField]
     public GameObject[] initialObjects;
+    public GameObject[] startObjects;
 
     private void Start()
     {
@@ -34,7 +35,7 @@ public class CountDownController : MonoBehaviour
 
         countdownDisplay.gameObject.SetActive(false);
 
-        foreach (GameObject go in initialObjects) go.SetActive(true);
+        foreach (GameObject go in startObjects) go.SetActive(true);
         //initialObjects.SetActive(true);
     }
 }

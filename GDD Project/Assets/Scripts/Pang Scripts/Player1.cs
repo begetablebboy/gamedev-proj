@@ -24,6 +24,7 @@ public class Player1 : MonoBehaviour
     public HealthBar healthbar;
     private string sceneName = "CatchingScene"; 
     public AudioClip hitSound;
+    public GameObject winText;
 
     void Awake()
     {
@@ -35,6 +36,7 @@ public class Player1 : MonoBehaviour
         //healthcount = 3;
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+        
 
     }
 
@@ -174,5 +176,7 @@ public class Player1 : MonoBehaviour
                                                //Application.LoadLevel(Application.loadedLevelName);
         SceneManager.LoadScene(sceneName);
         // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        winText.Find ("winText").GetComponent<winTextController> ().player2Win();
+        
     }
 }
