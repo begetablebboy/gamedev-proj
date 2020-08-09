@@ -53,7 +53,7 @@ public class Player2 : MonoBehaviour
 
     void Shoot()
     {
-        if (Input.GetKeyDown("enter"))
+        if (Input.GetKeyDown("l"))
         {
             // when click left mouse button
             if (canShoot)
