@@ -22,7 +22,7 @@ public class Player1 : MonoBehaviour
     public int maxHealth = 20;
     public int currentHealth;
     public HealthBar healthbar;
-    private string sceneName = "CatchingScene"; 
+    private string sceneName = "PangScore"; 
     public AudioClip hitSound;
     public TextMeshProUGUI result1;
 

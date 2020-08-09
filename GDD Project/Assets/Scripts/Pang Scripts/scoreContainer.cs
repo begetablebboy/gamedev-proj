@@ -18,7 +18,7 @@ public class scoreContainer : MonoBehaviour
 
     public TextMeshProUGUI drawResult;
 
-    private string sceneName = "CatchingScene"; 
+    private string sceneName = "PangScore"; 
 
     public GameObject countdown;
     
