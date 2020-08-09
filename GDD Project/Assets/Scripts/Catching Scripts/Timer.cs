@@ -24,7 +24,6 @@ public class Timer : MonoBehaviour
         // Starts the timer automatically
         timerIsRunning = true;
         results.text = "";
-        Debug.Log(PlayerPrefs.GetString("PangWinner"));
     }
 
     void Update()
