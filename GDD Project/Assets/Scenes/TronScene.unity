@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &30513920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b970f0aa44df343b884ab1f2153f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upKey: 273
-  downKey: 274
-  rightKey: 275
-  leftKey: 276
+  upKey: 119
+  downKey: 115
+  rightKey: 100
+  leftKey: 97
   speed: 16
   wallPrefab: {fileID: 4317162209004003264, guid: 6fe08e1b61bdf39478a49c9a7c5d3a1e,
     type: 3}
@@ -872,6 +872,11 @@ MonoBehaviour:
   - {fileID: 1878094121}
   - {fileID: 1428904942}
   - {fileID: 220293402}
+  startObjects:
+  - {fileID: 30513919}
+  - {fileID: 1878094121}
+  - {fileID: 1428904942}
+  - {fileID: 220293402}
 --- !u!1 &968462256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1878094122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1473,10 +1478,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b970f0aa44df343b884ab1f2153f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upKey: 119
-  downKey: 115
-  rightKey: 100
-  leftKey: 97
+  upKey: 273
+  downKey: 274
+  rightKey: 275
+  leftKey: 276
   speed: 16
   wallPrefab: {fileID: 6320621981699221751, guid: 351ce40d558b1d94ba52fc512e8583ef,
     type: 3}
