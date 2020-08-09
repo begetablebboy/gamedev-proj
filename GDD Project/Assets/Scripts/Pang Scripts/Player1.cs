@@ -23,6 +23,7 @@ public class Player1 : MonoBehaviour
     public int currentHealth;
     public HealthBar healthbar;
     private string sceneName = "CatchingScene"; 
+    public AudioClip hitSound;
 
     void Awake()
     {
@@ -150,6 +151,7 @@ public class Player1 : MonoBehaviour
             if(name[1] == "Ball")
             {
                 //healthcount = healthcount - 1;
+                AudioSource.PlayClipAtPoint(hitSound, transform.position);
                 currentHealth = currentHealth - 1;
                 healthbar.SetHealth(currentHealth);
 
@@ -167,6 +169,7 @@ public class Player1 : MonoBehaviour
     IEnumerator KillPlayer()
     {
         transform.position = new Vector3(200, 200, 0); // move player out of the screen to indicate player die
+        PlayerPrefs.SetString("PangWinner", "Player2");
         // restart game when player dies
         yield return new WaitForSeconds(1.5f); // wait for 1.5 secs after player dies, then restart level
                                                //Application.LoadLevel(Application.loadedLevelName);

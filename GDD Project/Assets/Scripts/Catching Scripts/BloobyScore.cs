@@ -70,6 +70,7 @@ public class BloobyScore : MonoBehaviour {
 
 	void EndGame() {
 		Timer timer = gameCanvas.GetComponent<Timer>();
+		PlayerPrefs.SetString("CatchingWinner", "Player2");
 		timer.results.text = "Player 2 wins!";
 		timer.EndGame();
 		timer.StartCoroutine(timer.ChangeGame());
