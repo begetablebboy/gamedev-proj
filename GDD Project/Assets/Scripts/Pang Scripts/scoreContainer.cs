@@ -28,6 +28,7 @@ public class scoreContainer : MonoBehaviour
 
     Score1 = GameObject.Find ("P1 Score").GetComponent<Text> ();
     Score2 = GameObject.Find ("P2 Score").GetComponent<Text> ();
+    PlayerPrefs.DeleteAll();
         
     }
 

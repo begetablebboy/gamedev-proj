@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-
+        
         DisplayTime(timeRemaining);
         if (timerIsRunning)
         {
@@ -40,17 +40,19 @@ public class Timer : MonoBehaviour
             {
                 Debug.Log("Time has run out!");
                 if (int.Parse(player2Score.text) > int.Parse(player1Score.text)){
-                    PlayerPrefs.SetString("CatchingWinner", "Player2");
+                    PlayerPrefs.SetInt("Player2", PlayerPrefs.GetInt("Player2") + 1);
                     results.text = "Player 2 wins!";
                     
                 }
                 else if (int.Parse(player1Score.text) > int.Parse(player2Score.text)){
-                    PlayerPrefs.SetString("CatchingWinner", "Player1");
+                    PlayerPrefs.SetInt("Player1", PlayerPrefs.GetInt("Player1") + 1);
                     results.text = "Player 1 wins!";
                     
                 }
                 else {
                     PlayerPrefs.SetString("CatchingWinner", "Draw");
+                    PlayerPrefs.SetInt("Player2", PlayerPrefs.GetInt("Player2") + 1);
+                    PlayerPrefs.SetInt("Player1", PlayerPrefs.GetInt("Player1") + 1);
                     results.text = "Draw!";
                     
                     // Application.LoadLevel(sceneName);
