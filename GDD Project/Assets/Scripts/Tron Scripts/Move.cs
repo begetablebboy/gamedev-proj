@@ -34,7 +34,7 @@ public class Move : MonoBehaviour
     bool player1 = false;
 
     bool player2 = false;
-
+    public AudioClip freezeSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -152,11 +152,13 @@ public class Move : MonoBehaviour
             if (co.gameObject.tag == "Freeze" && gameObject.name == "player_cyan")
             {
                 co.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(freezeSound, transform.position);
                 freeze();
             }
             else if (co.gameObject.tag == "Freeze" && gameObject.name == "player_pink")
             {
                 co.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(freezeSound, transform.position);
                 freeze();
             }
             else if (co.gameObject.tag == "Speed" && gameObject.name == "player_pink")
