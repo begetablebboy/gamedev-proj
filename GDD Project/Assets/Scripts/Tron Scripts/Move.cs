@@ -34,7 +34,7 @@ public class Move : MonoBehaviour
     bool player1 = false;
 
     bool player2 = false;
-
+    public AudioClip freezeSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -152,11 +152,13 @@ public class Move : MonoBehaviour
             if (co.gameObject.tag == "Freeze" && gameObject.name == "player_cyan")
             {
                 co.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(freezeSound, transform.position);
                 freeze();
             }
             else if (co.gameObject.tag == "Freeze" && gameObject.name == "player_pink")
             {
                 co.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(freezeSound, transform.position);
                 freeze();
             }
             else if (co.gameObject.tag == "Speed" && gameObject.name == "player_pink")
@@ -176,27 +178,27 @@ public class Move : MonoBehaviour
                 GameObject.Find("player_pink").GetComponent<Rigidbody2D>().velocity = new Vector2();
                 if (co.gameObject.tag == "pinkwall" && gameObject.name == "player_cyan")
                 {
-                    player1 = true;
+                    player2 = true;
                 }
                 else if (co.gameObject.tag == "bluewall" && gameObject.name == "player_pink")
                 {
-                    player2 = true;
+                    player1 = true;
                 }
                 else if (co.gameObject.tag == "pinkwall" && gameObject.name == "player_pink")
                 {
-                    player2 = true;
+                    player1 = true;
                 }
                 else if (co.gameObject.tag == "bluewall" && gameObject.name == "player_cyan")
                 {
-                    player1 = true;
+                    player2 = true;
                 }
                 else if (co.gameObject.tag == "Wall" && gameObject.name == "player_cyan")
                 {
-                    player1 = true;
+                    player2 = true;
                 }
                 else if (co.gameObject.tag == "Wall" && gameObject.name == "player_pink")
                 {
-                    player2 = true;
+                    player1 = true;
                 }
                 end = true;
             }
@@ -212,11 +214,13 @@ public class Move : MonoBehaviour
             if (player1)
             {
                 //Debug.Log("Player Pink wins");
+                PlayerPrefs.SetString("TronWinner", "Player1");
                 GUI.Label(new Rect(0, 0, 100, 20), "Player 1 Win !!"); // this will display the "You Win" text
             }
             else if (player2)
             {
                 //Debug.Log("Player Blue wins");
+                PlayerPrefs.SetString("TronWinner", "Player2");
                 GUI.Label(new Rect(0, 0, 100, 20), "Player 2 Win !!"); // this will display the "You Win" text
             }
             //GUI.Label(new Rect(0, 0, 100, 20), "You Win !!"); // this will display the "You Win" text

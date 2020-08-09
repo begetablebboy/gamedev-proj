@@ -20,6 +20,7 @@ public class FruitSpawner : MonoBehaviour {
 	}
 
 	void Start () {
+		
 		StartCoroutine (SpawnFruit(1.0f));
 	}
 

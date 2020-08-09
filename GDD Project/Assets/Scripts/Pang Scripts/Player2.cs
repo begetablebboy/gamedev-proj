@@ -167,6 +167,7 @@ public class Player2 : MonoBehaviour
     IEnumerator KillPlayer()
     {
         transform.position = new Vector3(200, 200, 0); // move player out of the screen to indicate player die
+        PlayerPrefs.SetString("PangWinner", "Player1");
         // restart game when player dies
         yield return new WaitForSeconds(1.5f); // wait for 1.5 secs after player dies, then restart level
                                                //Application.LoadLevel(Application.loadedLevelName);

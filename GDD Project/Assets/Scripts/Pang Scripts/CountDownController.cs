@@ -7,6 +7,7 @@ using TMPro;
 public class CountDownController : MonoBehaviour
 {
     public int countdownTime;
+    public bool done = false;
     public TextMeshProUGUI countdownDisplay;
     //[SerializeField]
     public GameObject[] initialObjects;
