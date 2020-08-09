@@ -203,46 +203,71 @@ public class Move : MonoBehaviour
                     player1 = true;
                 }
                 end = true;
+                score();
             }
 
         }
     }
 
-    void OnGUI() // this will bring up your game won GUI when atEnd is true
+    void score()
     {
-        if (end) //checks the value of the "atEend" variable and executes the code within if evaluated as true
+        if(end)
         {
-            GUI.BeginGroup(new Rect((Screen.width / 2) - 50, (Screen.height / 2) - 60, 100, 120)); // this begins a GUI group not required but it helps in organization
             if (player1)
             {
-                //Debug.Log("Player Pink wins");
                 if(!addedScore){
                     PlayerPrefs.SetInt("Player1", PlayerPrefs.GetInt("Player1") + 1);
                     addedScore = true;
                 }
-                GUI.Label(new Rect(0, 0, 100, 20), "Player 1 Win !!"); // this will display the "You Win" text
+                SceneManager.LoadScene("TronScore", LoadSceneMode.Single);
             }
             else if (player2)
             {
-                //Debug.Log("Player Blue wins");
                 if(!addedScore){
                     PlayerPrefs.SetInt("Player2", PlayerPrefs.GetInt("Player2") + 1);
                     addedScore = true;
                 }
-                GUI.Label(new Rect(0, 0, 100, 20), "Player 2 Win !!"); // this will display the "You Win" text
+                SceneManager.LoadScene("TronScore", LoadSceneMode.Single);
             }
-            //GUI.Label(new Rect(0, 0, 100, 20), "You Win !!"); // this will display the "You Win" text
-            if (GUI.Button(new Rect(0, 20, 100, 50), "Play Again")) // this displays the "play again" text and when clicked runs the "MoveToStart" function(method)
-            {
-                SceneManager.LoadScene("TronScene", LoadSceneMode.Single);
-            }
-            if (GUI.Button(new Rect(0, 70, 100, 50), "Quit")) // shows "quit" text and ends the game
-            {
-                Application.Quit();
-            }
-            GUI.EndGroup(); // this is required once to close the group started above
+            
         }
     }
+
+    // void OnGUI() // this will bring up your game won GUI when atEnd is true
+    // {
+    //     if (end) //checks the value of the "atEend" variable and executes the code within if evaluated as true
+    //     {
+    //         GUI.BeginGroup(new Rect((Screen.width / 2) - 50, (Screen.height / 2) - 60, 100, 120)); // this begins a GUI group not required but it helps in organization
+    //         if (player1)
+    //         {
+    //             //Debug.Log("Player Pink wins");
+    //             if(!addedScore){
+    //                 PlayerPrefs.SetInt("Player1", PlayerPrefs.GetInt("Player1") + 1);
+    //                 addedScore = true;
+    //             }
+    //             GUI.Label(new Rect(0, 0, 100, 20), "Player 1 Win !!"); // this will display the "You Win" text
+    //         }
+    //         else if (player2)
+    //         {
+    //             //Debug.Log("Player Blue wins");
+    //             if(!addedScore){
+    //                 PlayerPrefs.SetInt("Player2", PlayerPrefs.GetInt("Player2") + 1);
+    //                 addedScore = true;
+    //             }
+    //             GUI.Label(new Rect(0, 0, 100, 20), "Player 2 Win !!"); // this will display the "You Win" text
+    //         }
+    //         //GUI.Label(new Rect(0, 0, 100, 20), "You Win !!"); // this will display the "You Win" text
+    //         if (GUI.Button(new Rect(0, 20, 100, 50), "Play Again")) // this displays the "play again" text and when clicked runs the "MoveToStart" function(method)
+    //         {
+    //             SceneManager.LoadScene("TronScene", LoadSceneMode.Single);
+    //         }
+    //         if (GUI.Button(new Rect(0, 70, 100, 50), "Quit")) // shows "quit" text and ends the game
+    //         {
+    //             Application.Quit();
+    //         }
+    //         GUI.EndGroup(); // this is required once to close the group started above
+    //     }
+    // }
     public void freeze()
     {
         speed = 0f;
