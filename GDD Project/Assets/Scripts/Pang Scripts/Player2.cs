@@ -24,6 +24,7 @@ public class Player2 : MonoBehaviour
     public HealthBar healthbar;
     private string sceneName = "CatchingScene"; 
     public AudioClip hitSound;
+     public TextMeshProUGUI result2;
 
     void Awake()
     {
@@ -34,6 +35,7 @@ public class Player2 : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+         result2.gameObject.SetActive(false);
 
     }
 
@@ -169,9 +171,11 @@ public class Player2 : MonoBehaviour
         transform.position = new Vector3(200, 200, 0); // move player out of the screen to indicate player die
         PlayerPrefs.SetString("PangWinner", "Player1");
         // restart game when player dies
+        result2.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.5f); // wait for 1.5 secs after player dies, then restart level
                                                //Application.LoadLevel(Application.loadedLevelName);
         Application.LoadLevel(sceneName);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      
     }
 }
