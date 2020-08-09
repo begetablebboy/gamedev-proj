@@ -176,27 +176,27 @@ public class Move : MonoBehaviour
                 GameObject.Find("player_pink").GetComponent<Rigidbody2D>().velocity = new Vector2();
                 if (co.gameObject.tag == "pinkwall" && gameObject.name == "player_cyan")
                 {
-                    player1 = true;
+                    player2 = true;
                 }
                 else if (co.gameObject.tag == "bluewall" && gameObject.name == "player_pink")
                 {
-                    player2 = true;
+                    player1 = true;
                 }
                 else if (co.gameObject.tag == "pinkwall" && gameObject.name == "player_pink")
                 {
-                    player2 = true;
+                    player1 = true;
                 }
                 else if (co.gameObject.tag == "bluewall" && gameObject.name == "player_cyan")
                 {
-                    player1 = true;
+                    player2 = true;
                 }
                 else if (co.gameObject.tag == "Wall" && gameObject.name == "player_cyan")
                 {
-                    player1 = true;
+                    player2 = true;
                 }
                 else if (co.gameObject.tag == "Wall" && gameObject.name == "player_pink")
                 {
-                    player2 = true;
+                    player1 = true;
                 }
                 end = true;
             }
