@@ -23,6 +23,7 @@ public class Player1 : MonoBehaviour
     public int currentHealth;
     public HealthBar healthbar;
     private string sceneName = "CatchingScene"; 
+    public AudioClip hitSound;
 
     void Awake()
     {
@@ -150,6 +151,7 @@ public class Player1 : MonoBehaviour
             if(name[1] == "Ball")
             {
                 //healthcount = healthcount - 1;
+                AudioSource.PlayClipAtPoint(hitSound, transform.position);
                 currentHealth = currentHealth - 1;
                 healthbar.SetHealth(currentHealth);
 
