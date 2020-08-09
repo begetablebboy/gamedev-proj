@@ -20,6 +20,7 @@ public class FruitSpawner : MonoBehaviour {
 	}
 
 	void Start () {
+		Debug.Log(PlayerPrefs.GetInt("Player2"));
 		
 		StartCoroutine (SpawnFruit(1.0f));
 	}

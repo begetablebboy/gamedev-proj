@@ -37,6 +37,7 @@ public class CountDownController : MonoBehaviour
         countdownDisplay.gameObject.SetActive(false);
 
         foreach (GameObject go in startObjects) go.SetActive(true);
+        done = true;
         //initialObjects.SetActive(true);
     }
 }
