@@ -231,7 +231,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenu
+          m_StringArgument: WinningScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &102264374
@@ -923,6 +923,7 @@ GameObject:
   - component: {fileID: 1962019217}
   - component: {fileID: 1962019218}
   - component: {fileID: 1962019219}
+  - component: {fileID: 1962019220}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1116,6 +1117,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1962019220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962019213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f409e25004d5e041a1b229d2b68b516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2085647624
 GameObject:
   m_ObjectHideFlags: 0
