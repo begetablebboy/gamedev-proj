@@ -24,6 +24,7 @@ public class Timer : MonoBehaviour
         // Starts the timer automatically
         timerIsRunning = true;
         results.text = "";
+        Debug.Log(PlayerPrefs.GetString("PangWinner"));
     }
 
     void Update()
@@ -40,16 +41,17 @@ public class Timer : MonoBehaviour
             {
                 Debug.Log("Time has run out!");
                 if (int.Parse(player2Score.text) > int.Parse(player1Score.text)){
+                    PlayerPrefs.SetString("CatchingWinner", "Player2");
                     results.text = "Player 2 wins!";
                     
-                    // Application.LoadLevel(sceneName);
                 }
                 else if (int.Parse(player1Score.text) > int.Parse(player2Score.text)){
+                    PlayerPrefs.SetString("CatchingWinner", "Player1");
                     results.text = "Player 1 wins!";
                     
-                    // Application.LoadLevel(sceneName);
                 }
                 else {
+                    PlayerPrefs.SetString("CatchingWinner", "Draw");
                     results.text = "Draw!";
                     
                     // Application.LoadLevel(sceneName);

@@ -212,11 +212,13 @@ public class Move : MonoBehaviour
             if (player1)
             {
                 //Debug.Log("Player Pink wins");
+                PlayerPrefs.SetString("TronWinner", "Player1");
                 GUI.Label(new Rect(0, 0, 100, 20), "Player 1 Win !!"); // this will display the "You Win" text
             }
             else if (player2)
             {
                 //Debug.Log("Player Blue wins");
+                PlayerPrefs.SetString("TronWinner", "Player2");
                 GUI.Label(new Rect(0, 0, 100, 20), "Player 2 Win !!"); // this will display the "You Win" text
             }
             //GUI.Label(new Rect(0, 0, 100, 20), "You Win !!"); // this will display the "You Win" text
