@@ -73,7 +73,8 @@ public class BloobyScore : MonoBehaviour {
 		PlayerPrefs.SetInt("Player2", PlayerPrefs.GetInt("Player2") + 1);
 		timer.results.text = "Player 2 wins!";
 		timer.EndGame();
-		timer.StartCoroutine(timer.ChangeGame());
+		// timer.StartCoroutine(timer.ChangeGame());
+		Application.LoadLevel("CatchingScore");
 	}
 
 } // class

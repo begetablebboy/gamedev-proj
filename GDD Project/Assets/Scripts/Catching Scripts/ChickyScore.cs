@@ -73,7 +73,8 @@ public class ChickyScore : MonoBehaviour {
 		PlayerPrefs.SetInt("Player1", PlayerPrefs.GetInt("Player1") + 1);
 		timer.results.text = "Player 1 wins!";
 		timer.EndGame();
-		timer.StartCoroutine(timer.ChangeGame());
+		// timer.StartCoroutine(timer.ChangeGame());
+		Application.LoadLevel("CatchingScore");
 	}
 
 } // class
