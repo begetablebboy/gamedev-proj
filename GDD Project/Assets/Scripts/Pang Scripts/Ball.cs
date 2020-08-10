@@ -48,15 +48,7 @@ public class Ball : MonoBehaviour
         //  Debug.Log("Yea");
     // StartCoroutine(Attack());
         
-            // gameObject.SetActive(true);
-       
-    
-        
-
-        
-  
-        
-       
+            // gameObject.SetActive(true);       
     }
     void setActiveHere(){
         if(this.gameObject.tag=="Hidden"){
