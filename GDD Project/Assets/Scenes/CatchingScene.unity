@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ee7223ee4572347a2027b521941d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 60
+  timeRemaining: 65
   timerIsRunning: 1
   results: {fileID: 979895227}
   timeText: {fileID: 1302564881}
