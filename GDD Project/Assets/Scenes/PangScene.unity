@@ -1685,6 +1685,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3359261359718155153, guid: a95a2b972dec3a747833a59ab95fb438,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3359261359718155155, guid: a95a2b972dec3a747833a59ab95fb438,
         type: 3}
       propertyPath: m_Offset.x
@@ -1719,6 +1724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359261359718155183, guid: a95a2b972dec3a747833a59ab95fb438,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3359261359718155155, guid: a95a2b972dec3a747833a59ab95fb438, type: 3}
@@ -4016,6 +4026,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7944477977057370179, guid: 8aaf7128012d3204fbc77c611ab88487,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7944477977057370183, guid: 8aaf7128012d3204fbc77c611ab88487,
         type: 3}
       propertyPath: dieSound
@@ -4075,6 +4090,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944477977057370237, guid: 8aaf7128012d3204fbc77c611ab88487,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aaf7128012d3204fbc77c611ab88487, type: 3}

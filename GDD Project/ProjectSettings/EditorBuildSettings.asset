@@ -18,24 +18,30 @@ EditorBuildSettings:
     path: Assets/Scenes/PangScene.unity
     guid: 249f59cd65ac1c14ba018f10ec8b3fbc
   - enabled: 1
+    path: Assets/Scenes/PangScore.unity
+    guid: b7cccce139a2c734ca74a1e53d836632
+  - enabled: 1
     path: Assets/Scenes/Catching Intro.unity
     guid: 90ded829afb23954cbd9c6e14d1ec79c
   - enabled: 1
     path: Assets/Scenes/CatchingScene.unity
     guid: 126e77482de8643de910be58a33e12a9
   - enabled: 1
+    path: Assets/Scenes/CatchingScore.unity
+    guid: 47eccd83c1603d541968ff770089154c
+  - enabled: 1
     path: Assets/Scenes/Tron Intro.unity
     guid: 849a5226d0da7cf429fd05c7fe6a28a1
   - enabled: 1
     path: Assets/Scenes/TronScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/PangScore.unity
-    guid: b7cccce139a2c734ca74a1e53d836632
   - enabled: 1
     path: Assets/Scenes/TronScore.unity
     guid: d9c92bffdd9bc3241a791123121d2936
+  - enabled: 1
+    path: Assets/Scenes/WinningScene.unity
+    guid: c76b5e8c685f82c41a325559f0153e05
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

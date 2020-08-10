@@ -20,12 +20,6 @@ public class ShowWinner : MonoBehaviour
         //Debug.Log(PlayerPrefs.GetInt("Player2"));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void whoWin()
     {
         if(PlayerPrefs.GetInt("Player1") > PlayerPrefs.GetInt("Player2"))

@@ -29,9 +29,6 @@ public class Ball : MonoBehaviour
         //     this.gameObject.SetActiveRecursively(false);
         // }
 
-
-       
-
     }
 
     // Update is called once per frame
@@ -91,7 +88,7 @@ public class Ball : MonoBehaviour
         //ball1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 2.5f);
         //ball2.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 2.5f);
 
-        AudioSource.PlayClipAtPoint(popSounds[UnityEngine.Random.Range(0, popSounds.Length)], transform.position); // play popSounds at position
+        AudioSource.PlayClipAtPoint(popSounds[UnityEngine.Random.Range(0, popSounds.Length)], 0.9f * Camera.main.transform.position + 0.1f * transform.position, 1f); // play popSounds at position
         gameObject.SetActive(false);
     }
 
@@ -195,7 +192,7 @@ public class Ball : MonoBehaviour
             }
             else
             {
-                AudioSource.PlayClipAtPoint(popSounds[UnityEngine.Random.Range(0, popSounds.Length)], transform.position);
+                AudioSource.PlayClipAtPoint(popSounds[UnityEngine.Random.Range(0, popSounds.Length)], 0.9f * Camera.main.transform.position + 0.1f * transform.position, 1f);
                 gameObject.SetActive(false);
             }
            
@@ -210,7 +207,7 @@ public class Ball : MonoBehaviour
             }
             else
             {
-                AudioSource.PlayClipAtPoint(popSounds[UnityEngine.Random.Range(0, popSounds.Length)], transform.position);
+                AudioSource.PlayClipAtPoint(popSounds[UnityEngine.Random.Range(0, popSounds.Length)], 0.9f * Camera.main.transform.position + 0.1f * transform.position, 1f);
                 gameObject.SetActive(false);
             }
         }   

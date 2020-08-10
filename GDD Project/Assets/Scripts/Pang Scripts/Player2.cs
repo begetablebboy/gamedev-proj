@@ -36,6 +36,7 @@ public class Player2 : MonoBehaviour
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
          result2.gameObject.SetActive(false);
+        Physics2D.IgnoreLayerCollision(9,10,true);
 
     }
 
@@ -76,7 +77,7 @@ public class Player2 : MonoBehaviour
         // TODO: Change to Object Pooling
         Instantiate(rocket, temp, Quaternion.identity);
 
-        AudioSource.PlayClipAtPoint(shootSound, transform.position); // play shoot audio at player position
+        AudioSource.PlayClipAtPoint(shootSound, 0.9f * Camera.main.transform.position + 0.1f * transform.position, 1f); // play shoot audio at player position
 
         yield return new WaitForSeconds(0.2f);
         anim.SetBool("isShoot", false); // set isShoot condition in animator to false, so can go back from PangShoot back to PangIdle
@@ -151,14 +152,14 @@ public class Player2 : MonoBehaviour
 
             if(name[1] == "Ball")
             {
-                AudioSource.PlayClipAtPoint(hitSound, transform.position);
+                AudioSource.PlayClipAtPoint(hitSound, 0.9f * Camera.main.transform.position + 0.1f * transform.position, 1f);
                 currentHealth = currentHealth - 1;
                 healthbar.SetHealth(currentHealth);
 
                 if (currentHealth == 0)
                 {
                     anim.SetBool("isDie", true);
-                    AudioSource.PlayClipAtPoint(dieSound, transform.position);
+                    AudioSource.PlayClipAtPoint(dieSound, 0.9f * Camera.main.transform.position + 0.1f * transform.position, 1f);
                     //when player touches ball, player dies
                     StartCoroutine(KillPlayer());
                 }
