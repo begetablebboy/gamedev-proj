@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     public GameObject player1;
     
     public GameObject player2;
-    private string sceneName = "TronScene";
+    private string sceneName = "CatchingScore";
     private float timer = 0;
     private bool timerReached = false;
     private void Start()
