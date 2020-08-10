@@ -1167,11 +1167,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 985175273}
   sentences:
-  - 'MR RACOON: Happy Agents'' Day! It is the time of the year again where agents
+  - 'MR RACCOON: Happy Agents'' Day! It is the time of the year again where agents
     bond and have fun.'
-  - 'MR RACOON: For our main event, your skills will be put to the test. You will
+  - 'MR RACCOON: For our main event, your skills will be put to the test. You will
     compete with other agents through a series of challenges.'
-  - 'MR RACOON: There will be 3 challenges: Pang, Catching and Tron. Whoever gets
+  - 'MR RACCOON: There will be 3 challenges: Pang, Catching and Tron. Whoever gets
     best out of 3 is the winner. Goodluck and have fun!'
   typingspeed: 0.03
   continueButton: {fileID: 867741011}
